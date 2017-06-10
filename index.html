@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<section class="slider">
+		<!-- 
+			We cant wrap this inputs into DIV or other element since we are looking for checked input and updating .slider css, 
+			We can access .slider by sibling selector but if we were to put inputs in the div, we will have to get parent first and then .slider, Unfortunately css and css3 do not have parent selector implemented as of yet, year 2017. so always make them siblings or child, when you need to access them correctly. its a css limitation, which can be fixed via js.. 
+		-->
+		<input type="radio" name="respond" class="respondInput desktop hide" id="desktop" checked="checked"/>
+		<input type="radio" name="respond" class="respondInput tablet hide" id="tablet" />
+		<input type="radio" name="respond" class="respondInput mobile hide" id="mobile" />
+
+		<div class="respond">
+			
+			<label class="desktop" for="desktop">
+				<img class="respondIcon" src="./images/desktop.png"/>
+				<label class="respondLabel">Desktop</label>
+			</label>
+			
+			<label class="tablet" for="tablet">
+				<img class="respondIcon" src="./images/tablet.png"/>
+				<label class="respondLabel">Tablet</label>
+			</label>
+			
+			<label class="mobile" for="mobile">
+				<img class="respondIcon" src="./images/mobile.png"/>
+				<label class="respondLabel">Mobile</label>
+			</label>
+
+		</div>
+
+
+		<article class="slides">
+			<h1 style="text-align:center;">Centered Heading</h1>
+			<p style="text-align:center;">Centered paragraph.</p>
+		</article>	
+		
+	</section>	
+</body>
+</html>
